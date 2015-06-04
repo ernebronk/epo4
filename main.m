@@ -3,6 +3,7 @@
     clear all;
     close all;
     clc;
+    addpath('Functions');
 % Start the program
 %    result =  program();
 
