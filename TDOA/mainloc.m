@@ -1,20 +1,20 @@
-clear all
-close all
-clc
+% clear all
+% close all
+% clc
 
 %Parameters
-xsize = 2;
-ysize = 2;
-div = 1;
+% xsize = 2;
+% ysize = 2;
+% div = 1;
 
 %Locaties Microfoons
-x1 = [0; 0];
-x2 = [413; 0];
-x3 = [413; 210];
-x4 = [0; 210];
-x5 = [173; 0];
-
-xmic = [x1 x2 x3 x4 x5];
+% x1 = [0; 0];
+% x2 = [413; 0];
+% x3 = [413; 210];
+% x4 = [0; 210];
+% x5 = [173; 0];
+% 
+% xmic = [x1 x2 x3 x4 x5];
 
 %Data binnenhalen
 %functie van Kevin
@@ -28,9 +28,9 @@ rafstand24 = 100*m(5)
 rafstand34 = 100*m(6)
 
 %Grid bouwen
-tic
-[r12 r13 r14 r23 r24 r34 xmax ymax] = rijgrid(xsize, ysize, xmic);
-toc
+
+%[r12 r13 r14 r23 r24 r34 xmax ymax] = rijgrid(xsize, ysize, xmic);
+
 
 %Grid vergelijken
 tic

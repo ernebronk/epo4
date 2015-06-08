@@ -34,6 +34,12 @@ while(state < 900)
     end
 
     % Get the position
+    
+    [loc12 loc13 loc14 loc23 loc24 loc34] = matchgrid(xsize, ysize, div, rafstand12, rafstand13, rafstand14, rafstand23, rafstand24, rafstand34, r12, r13, r14, r23, r24, r34, xmax, ymax);
+    [xp1 xp2 xp3 xp4 xp5] = locatie(loc12, loc13, loc14, loc23, loc24, loc34, xsize, ysize, div);
+
+    
+    % EO
     status();
     dir = nav(carpos,carposp,target);
     
