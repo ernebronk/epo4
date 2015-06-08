@@ -4,6 +4,7 @@
     close all;
     clc;
     addpath('Functions');
+    addpath('TDOA');
 % Start the program
 %    result =  program();
 

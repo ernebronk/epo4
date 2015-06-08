@@ -25,7 +25,7 @@ end
 
 disp('HOI');
 while(state < 900)
-    if(abs(carpos(1) - target(1)) < res && abs(carpos(2) - target(2) < res))
+    if(abs(carpos(1) - target(1)) < res && abs(carpos(2) - target(2)) < res)
         speed = 150;
         state = 900;
     else
