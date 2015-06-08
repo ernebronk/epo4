@@ -1,9 +1,13 @@
 % CAR = 8 = 32B3
+global state;
+
 
 % Test variables
-    COM_PORT    = 38;
+    COM_PORT    = 37;
+    DELAY       = 0.4;
     LIVE        = 0;
     state       = 0;
+    
 
 % Globals
 global DEBUG;
@@ -13,16 +17,18 @@ global dirNeutral;
 global n;
 global logboek;
 n = 2;
-DEBUG = false;
+DEBUG = true;
 logboek{1, 1} = 'Time';
 logboek{1, 2} = 'Xpos';
 logboek{1, 3} = 'Ypos';
 logboek{1, 4} = 'Battery';
+logboek{1, 5} = 'Speed';
+logboek{1, 6} = 'Direction';
 
 
 % System Constants
 conn_state = 0;
-target = [ 10 10 ];
+target = [ 5 0 ];
 
 
 % Car constants
@@ -34,10 +40,10 @@ dir_tx          = 150;
 dirRight        = 160;
 dirLeft         = 140;
 minBat          = 18000; %Minimal value in mV;
-fwdSpeed        = 154;
-carpos          = [ 1 0 ];
-carposp         = [ 1 -1 ];
+fwdSpeed        = 158;
+carpos          = [ 5 0 ];
+carposp         = [ 5 -1 ];
 
-res = 0;
+res = 1;
 
 
