@@ -29,7 +29,7 @@ logboek{1, 6} = 'Direction';
 
 % System Constants
 conn_state = 0;
-target1 = [ 5 10 ];
+target1 = [ 270 100 ];
 target2 = [ 10 10];
 target = [0 0];
 
@@ -47,30 +47,10 @@ fwdSpeed        = 158;
 carpos          = [ 5 0 ];
 carposp         = [ 5 -1 ];
 
-res = 1;
+res = 10;
 
 
-% Marcstuk
 
-%Parameters
-xsize = 2;
-ysize = 2;
-div = 1;
-x1 = [0; 0];
-x2 = [413; 0];
-x3 = [413; 210];
-x4 = [0; 210];
-x5 = [173; 0];
-xmic = [x1 x2 x3 x4 x5];
-[r12 r13 r14 r23 r24 r34 xmax ymax] = rijgrid(xsize, ysize, xmic);
-
-m=TDOAv0_1(8);
-rafstand12 = 100*m(1)
-rafstand13 = 100*m(2)
-rafstand14 = 100*m(3)
-rafstand23 = 100*m(4)
-rafstand24 = 100*m(5)
-rafstand34 = 100*m(6)
 
 
 

@@ -4,8 +4,8 @@
     close all;
     clc;
     addpath('Functions');
-    addpath('TDOA');
-    addpath('micrec');
+    addpath('Zwaluabeunmap');
+
 % Start the program
 %    result =  program();
 
