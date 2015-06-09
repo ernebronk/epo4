@@ -2,8 +2,13 @@ function battery = status()
 
 global logboek;
 global n;
+global LIVE;
 
+if (LIVE)
 status = EPOCommunications('transmit','S'); % request status string
+else
+status = EPOCommunications1('transmit','S'); % request status string
+end
 dircar      = str2num(status(2:4));
 speedcar    = str2num(status(6:8));
 [t_status ~,] = strsplit(status,{' ','U','A', 'D'});

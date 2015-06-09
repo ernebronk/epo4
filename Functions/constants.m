@@ -1,5 +1,6 @@
 % CAR = 8 = 32B3
 global state;
+global LIVE;
 
 
 % Test variables

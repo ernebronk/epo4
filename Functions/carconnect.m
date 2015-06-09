@@ -1,12 +1,16 @@
 function result = carconnect(com_txt)
-
+global LIVE;
 
 com_txt = num2str(com_txt);
 %Comport naam bouwen
 comname = ['\\.\COM' com_txt];
 
 %Open de connectie
-result = EPOCommunications('open',comname);
+if(LIVE)
+    result = EPOCommunications('open',comname);
+else
+    result = EPOCommunications1('open',comname);
+end
 
 %Kijken of het gelukt is om een connectie te maken
 if result==0

@@ -41,11 +41,11 @@ while(state < 900)
         state = 900;
     else
         speed = fwdSpeed;
-        target = taget2;
+        target = target2;
     end
 
     % Get the position
-        
+    carpos = [ 5 10];
     % EO
     status();
     dir = nav(carpos,carposp,target);
@@ -61,6 +61,7 @@ while(state < 900)
     %carposp = carpos;
     logboek{n,5} = speed;
     logboek{n,6} = dir;
+    logboek{n,7} = state;
     
 end
 
