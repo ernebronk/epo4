@@ -27,21 +27,18 @@ disp('HOI');
 while(state < 900)
     
     % Target 1
-    if(abs(carpos(1) - target1(1)) < res && abs(carpos(2) - target1(2)) < res && state ~= 450)
+    if(abs(carpos(1) - target(1)) < res && abs(carpos(2) - target(2)) < res && state )
         speed = 150;
         state = 450;
-        pause(2)
     else
         speed = fwdSpeed;
-        target = target1;
     end
     
-    if(abs(carpos(1) - target2(1)) < res && abs(carpos(2) - target2(2)) < res && state == 450)
+    if(abs(carpos(1) - target(1)) < res && abs(carpos(2) - target(2)) < res && state == 450)
         speed = 150;
         state = 900;
     else
         speed = fwdSpeed;
-        target = taget2;
     end
 
     % Get the position

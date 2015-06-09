@@ -28,7 +28,9 @@ logboek{1, 6} = 'Direction';
 
 % System Constants
 conn_state = 0;
-target = [ 5 10 ];
+target1 = [ 5 10 ];
+target2 = [ 10 10];
+target = [0 0];
 
 
 % Car constants

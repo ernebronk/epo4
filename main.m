@@ -5,6 +5,7 @@
     clc;
     addpath('Functions');
     addpath('TDOA');
+    addpath('micrec');
 % Start the program
 %    result =  program();
 
