@@ -45,7 +45,7 @@ while(state < 900)
     end
 
     % Get the position
-    [carpos(1) carpos(2)] = mainloc();
+    [carpos(1) carpos(2)] = loctdo();
     % EO
     status();
     dir = nav(carpos,carposp,target);

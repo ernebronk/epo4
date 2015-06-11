@@ -3,6 +3,8 @@ global DEBUG;
 global dirRight;
 global dirLeft;
 global dirNeutral;
+global logboek;
+global n;
 
 % getOrientation(car(1), ycar, xcarp, ycarp);
 HDG = getOrientation(carp(1),carp(2),car(1),car(2));
@@ -19,13 +21,18 @@ end
 
 if( HDG - atarget > 180 )
     dir = dirLeft;
-elseif( HDG - atarget > 0 )
+elseif( HDG - atarget < -180)
     dir = dirRight;
-elseif( HDG - atarget < 0 )
+elseif( HDG - atarget > 10 )
+    dir = dirRight;
+elseif( HDG - atarget < 10 )
     dir = dirLeft;
 elseif( HDG - target == 0)
     dir = dirNeutral;
 else
     dir = 150;
 end
+
+logboek{n,8} = HDG;
+logboek{n,9} = atarget;
 end

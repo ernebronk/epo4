@@ -1,4 +1,4 @@
-function [x y] = mainloc()
+function [x y] = mainloc(m)
 %Parameters
 xsize = 3;
 ysize = 3;
@@ -9,14 +9,14 @@ div = 3;
 a = [1 0 0 0 0 1];
 
 %Meting kiezen (1 tot 10)
-m=TDOAv1_0();
+% % m=TDOAv1_0();
 
 %Locaties Microfoons
 x1 = [0; 0];
-x2 = [413; 0];
-x3 = [413; 210];
-x4 = [0; 210];
-x5 = [173; 0];
+x2 = [650; 0];
+x3 = [650; 550];
+x4 = [0; 550];
+x5 = [300; 0];
 
 xmic = [x1 x2 x3 x4 x5];
 
@@ -43,6 +43,6 @@ rafstand34 = 100*m(6);
 
 %Plotter (indien nodig)
 % tic
-% plotter(loc12, loc13, loc14, loc23, loc24, loc34, x, y);
+%plotter(loc12, loc13, loc14, loc23, loc24, loc34, x, y);
 % toc
 end

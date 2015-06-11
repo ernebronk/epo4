@@ -1,34 +1,36 @@
-function [m] = TDOAv1_0()
+function [m] = TDOAv1_0(mic)
 
 %recording sample
-audiodevinfo
-ID = findInDevID('Ingang achter (SoundMAX Integra');
-mic = pa_wavrecord(1, 5, 14400, 48000,ID )';
+%audiodevinfo
+%ID = findInDevID('Ingang achter (SoundMAX Integra');
+
 
 %preset values
 Fs = 48000;
 v = 343; 
-m = 1:10;
+m = 1:6;
 locsm=1:5;
 
-if mean(abs(mic(1,1:100))) >= mean(abs(mic(1,1000:1100)))
-    [pk,locs] = findpeaks(mic(1,:),'MinPeakHeight',0.9*max(mic(1,:)));
-    for i=1:5
-        mic(i,1:10001) = mic(i,locs-1000:locs+9000);
-    end    
-end
 
+if mean(abs(mic(1,1:1000))) >= mean(abs(mic(1,4000:6000)))
+    [pk,locs] = findpeaks(mic(1,:),'MinPeakHeight',0.70*max(mic(1,:)));
+    a = locs;
+    if locs(1) >= 2500
+    for i=1:5
+        mic(i,1:length(mic(i,locs(1)-3000:length(mic)))) = mic(i,locs(1)-3000:length(mic));    
+    end
+    end
+end
 for i=1:5
-    [pk,locs] = findpeaks(mic(i,:),'MinPeakHeight',0.2*max(mic(i,:)));
+    [pk,locs] = findpeaks(mic(i,:),'MinPeakHeight',0.3*max(mic(i,:)));
     locsm(i)=locs(1);
 end
-
 [h,micar] = calch(mic,locsm);
 
-for i=1:10                 
-    [pk,locs] = findpeaks(abs(h(i,:)),'MinPeakHeight',0.9*abs(max(h(i,:))));
+for i=1:6                
+    [pk,locs] = findpeaks(abs(h(i,:)),'MinPeakHeight',0.8*abs(max(h(i,:))));
     locst = locs(1);
-    if locst >= 690 
+    if locst >= 12000 
         [pk,locs] = findpeaks(fliplr(h(i,:)),'MinPeakHeight',0.9*max(h(i,:)));
         locst = locs(1);
     end

@@ -44,7 +44,7 @@ for y = 1:length(yloop)
     y = y + 1;
 end
 clear x y
-disp('r12 matrix klaar')
+%disp('r12 matrix klaar')
 
 % r13
 for y = 1:length(yloop)
@@ -55,7 +55,7 @@ for y = 1:length(yloop)
     y = y + 1;
 end
 clear x y
-disp('r13 matrix klaar')
+%disp('r13 matrix klaar')
 
 % r14
 for y = 1:length(yloop)
@@ -66,7 +66,7 @@ for y = 1:length(yloop)
     y = y + 1;
 end
 clear x y
-disp('r14 matrix klaar')
+%disp('r14 matrix klaar')
 
 % r23
 for y = 1:length(yloop)
@@ -77,7 +77,7 @@ for y = 1:length(yloop)
     y = y + 1;
 end
 clear x y
-disp('r23 matrix klaar')
+%disp('r23 matrix klaar')
 
 % r24
 for y = 1:length(yloop)
@@ -88,7 +88,7 @@ for y = 1:length(yloop)
     y = y + 1;
 end
 clear x y
-disp('r24 matrix klaar')
+%disp('r24 matrix klaar')
 
 % r34
 for y = 1:length(yloop)
@@ -99,6 +99,6 @@ for y = 1:length(yloop)
     y = y + 1;
 end
 clear x y
-disp('r34 matrix klaar')
+%disp('r34 matrix klaar')
 
 end

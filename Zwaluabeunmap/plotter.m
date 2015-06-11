@@ -1,10 +1,10 @@
 function plotter(loc12, loc13, loc14, loc23, loc24, loc34, x ,y);
 
 %Plotter
-xxp1 = [0 ; 413];
+xxp1 = [0 ; 650];
 yxp1 = [y; y];
 xxp2 = [x ; x];
-yxp2 = [0; 210];
+yxp2 = [0; 550];
 
 %plot voorbereiden
 figure(1)
@@ -54,9 +54,9 @@ plot(xxp2,yxp2,'r-.');
 
 %grafiek opmaken
 stap = 50;
-tickValues = 0:stap:413;
+tickValues = 0:stap:660;
 
-axis([0 413 0 210]); %veld forceren
+axis([0 660 0 550]); %veld forceren
 grid('on');
 set(gca,'XTick',tickValues,'YTick',tickValues);
 xlabel('Positie in centimeters');
