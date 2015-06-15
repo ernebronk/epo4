@@ -22,7 +22,7 @@ locs = [x1'
     COM_PORT    = 71;
     DELAY1      = 0.4;
     DELAY2      = 1;
-    LIVE        = 1;
+    LIVE        = 0;
     state       = 0;
     
 
@@ -42,6 +42,8 @@ logboek{1, 3} = 'Ypos';
 logboek{1, 4} = 'Battery';
 logboek{1, 5} = 'Speed';
 logboek{1, 6} = 'Direction';
+logboek{1, 8} = 'Heading';
+logboek{1, 9} = 'Target';
 
 
 % System Constants
@@ -56,8 +58,8 @@ speed_rx        = 0;
 dirNeutral      = 150;
 dir_rx          = 0;
 dir_tx          = 150;
-dirRight        = 140;
-dirLeft         = 160;
+dirRight        = 160;
+dirLeft         = 140;
 minBat          = 17000; %Minimal value in mV;
 fwdSpeed        = 155;
 carpos          = [ 300 540 ];

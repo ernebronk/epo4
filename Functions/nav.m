@@ -25,9 +25,9 @@ if( HDG - atarget > 180 )
     dir = dirLeft;
 elseif( HDG - atarget < -180)
     dir = dirRight;
-elseif( HDG - atarget > 10 )
-    dir = dirRight;
 elseif( HDG - atarget < 10 )
+    dir = dirRight;
+elseif( HDG - atarget > 10 )
     dir = dirLeft;
 elseif( HDG - target == 0)
     dir = dirNeutral;
@@ -38,5 +38,4 @@ end
 logboek{n,8} = HDG;
 logboek{n,9} = atarget;
 
-gui.hdg.String = [gui.data.names.hdg num2str(HDG)];
 end

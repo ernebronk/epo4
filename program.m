@@ -30,25 +30,25 @@ while(state < 900)
     disp(' ');
     disp(['STEP ' num2str(n)]);
     % Target 1
-%     if(abs(carpos(1) - target1(1)) < res && abs(carpos(2) - target1(2)) < res && state ~= 450)
-%         speed = 150;
-%         state = 450;
-%         pause(2)
-%     else
-%         speed = fwdSpeed;
-%         speed = 150;
-%         target = target1;
-%     end
-%     
-%     if(abs(carpos(1) - target2(1)) < res && abs(carpos(2) - target2(2)) < res && state == 450)
-%         speed = 150;
-%         state = 900;
-%     else
-%         speed = fwdSpeed;
-%         target = target2;
-%     end
+    if(abs(carpos(1) - target1(1)) < res && abs(carpos(2) - target1(2)) < res && state ~= 450)
+        speed = 150;
+        state = 450;
+        pause(2)
+    else
+        speed = fwdSpeed;
+        speed = 150;
+        target = target1;
+    end
+    
+    if(abs(carpos(1) - target2(1)) < res && abs(carpos(2) - target2(2)) < res && state == 450)
+        speed = 150;
+        state = 900;
+    else
+        speed = fwdSpeed;
+        target = target2;
+    end
 
-target = target1;
+
 
     %--------------- Stage 2 --------------
     %-- Get the posision of the car -------
@@ -66,7 +66,11 @@ target = target1;
     dir = nav(carpos,carposp,target);
     
     % send the data
-    send(dir,speed);
+    if (carpos(1) == 0 && carpos(2) == 0)
+        send(150,150)
+    else
+        send(dir,speed);
+    end
     % Wait a moment
     pause(DELAY2);
     % Send stop
