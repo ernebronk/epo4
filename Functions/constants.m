@@ -19,10 +19,10 @@ locs = [x1'
     %EPO4figure.setMicLoc(locs)
 
 % Test variables
-    COM_PORT    = 94;
+    COM_PORT    = 71;
     DELAY1      = 0.4;
-    DELAY2      = 0.4;
-    LIVE        = 0;
+    DELAY2      = 1;
+    LIVE        = 1;
     state       = 0;
     
 
@@ -47,8 +47,7 @@ logboek{1, 6} = 'Direction';
 % System Constants
 conn_state = 0;
 target1 = [ 100 100 ];
-target2 = [ 100 100];
-target = [0 0];
+target2 = [ 100 100 ];
 
 
 % Car constants
@@ -57,14 +56,14 @@ speed_rx        = 0;
 dirNeutral      = 150;
 dir_rx          = 0;
 dir_tx          = 150;
-dirRight        = 160;
-dirLeft         = 140;
-minBat          = 18000; %Minimal value in mV;
-fwdSpeed        = 154;
+dirRight        = 140;
+dirLeft         = 160;
+minBat          = 17000; %Minimal value in mV;
+fwdSpeed        = 155;
 carpos          = [ 300 540 ];
 carposp         = [ 300 600 ];
 
-res = 100;
+res = 10;
 
 
 

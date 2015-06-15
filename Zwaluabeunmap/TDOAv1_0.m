@@ -1,5 +1,7 @@
 function [m] = TDOAv1_0(mic)
 
+
+
 %recording sample
 %audiodevinfo
 %ID = findInDevID('Ingang achter (SoundMAX Integra');
@@ -28,7 +30,7 @@ end
 [h,micar] = calch(mic,locsm);
 
 for i=1:6                
-    [pk,locs] = findpeaks(abs(h(i,:)),'MinPeakHeight',0.8*abs(max(h(i,:))));
+    [pk,locs] = findpeaks(abs(h(i,:)),'MinPeakHeight',0.6*abs(max(h(i,:))));
     locst = locs(1);
     if locst >= 12000 
         [pk,locs] = findpeaks(fliplr(h(i,:)),'MinPeakHeight',0.9*max(h(i,:)));

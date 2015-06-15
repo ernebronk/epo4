@@ -1,6 +1,7 @@
 function [x y] = loctdo()
 
 global LIVE;
+global mic;
 
 %      EPO4figure.setWayPoint(way)
 %      EPO4figure.setDestination(des)
