@@ -20,10 +20,9 @@ while(cstate == 0)
         n = n + 1;
     end  
     logboek{n,1} = toc;
-    disp('Batceck');
+    disp(battery);
 end
 
-disp('HOI');
 while(state < 900)
     %--------------- Stage 1 --------------
     %-- Check if car is at target ---------
