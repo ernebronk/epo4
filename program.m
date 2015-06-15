@@ -33,6 +33,7 @@ while(state < 900)
         pause(2)
     else
         speed = fwdSpeed;
+        speed = 150;
         target = target1;
     end
     
@@ -69,8 +70,12 @@ end
 
 
 % Clearing all the things
-
-EPOCommunications('close');
+if(LIVE)
+    EPOCommunications('close');
+else
+    EPOCommunications1('close');
+end
+    
 
 name = '';
 for n = 1:6

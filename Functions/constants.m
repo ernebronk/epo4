@@ -21,7 +21,7 @@ locs = [x1'
 % Test variables
     COM_PORT    = 94;
     DELAY       = 0.4;
-    LIVE        = 1;
+    LIVE        = 0;
     state       = 0;
     
 

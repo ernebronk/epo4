@@ -6,13 +6,15 @@ global dirNeutral;
 global logboek;
 global n;
 
+
+
 % getOrientation(car(1), ycar, xcarp, ycarp);
 HDG = getOrientation(carp(1),carp(2),car(1),car(2));
 HDG = HDG/(2*pi) * 360;
 atarget = getOrientation(car(1), car(2), target(1), target(2));
 atarget = atarget/(2*pi) * 360;
 
-if(1)
+if(DEBUG)
 disp('HDG =');
 disp(HDG);
 disp('Angle =');

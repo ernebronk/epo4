@@ -23,11 +23,12 @@ btn = uicontrol('Style', 'pushbutton', 'String', 'STOP',...
 xpos = uicontrol('Style', 'text', 'String', 'STOP',...
         'Position', [20 40 50 20],...
         'Callback', @STOP);  
-global guidata;
+    
+global g_HDG;
+global g_ANG;
 
-guidata.xpos = 10;
-guidata.ypos = 20;
-
-
+g_HDG = uicontrol(  'Style', 'text',...
+                    'String', 'HDG',...
+                    'Position',[20 60 50 20]);
 
 program;
