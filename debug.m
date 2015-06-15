@@ -53,7 +53,7 @@ drawArrow(x1,y1);
 
 
 
-
+%% Dit is ook koel.
 % hold on;
 % scatter(x(1), y(1))
 % scatter(x(2), y(2))
