@@ -10,7 +10,7 @@ logboek{1,6} = 'XTarget';
 logboek{1,7} = 'YTarget';
 
 
-for n = 2:2
+for n = 2:5
 %testfule
    x = randi(413, 1, 3);
    y = randi(210, 1, 3);
