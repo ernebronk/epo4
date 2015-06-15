@@ -21,13 +21,13 @@ disp('Angle =');
 disp(atarget);
 end
 
-if( HDG - atarget > 180 )
+if( HDG - atarget < -180 )
     dir = dirLeft;
-elseif( HDG - atarget < -180)
+elseif( HDG - atarget > 180 )
     dir = dirRight;
-elseif( HDG - atarget < 10 )
+elseif( HDG < atarget )
     dir = dirRight;
-elseif( HDG - atarget > 10 )
+elseif( HDG > atarget )
     dir = dirLeft;
 elseif( HDG - target == 0)
     dir = dirNeutral;

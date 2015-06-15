@@ -27,11 +27,34 @@ for n = 2:2
    logboek{n,6} = x(3);
    logboek{n,7} = y(3);
 
-dir = nav([xcar ycar], [xcarp ycarp], [xtarget ytarget])
+dir = nav([xcar ycar], [xcarp ycarp], [xtarget ytarget]);
+if(dir == 160)
+    disp('Rechts');
+elseif(dir == 140)
+    disp('Links')
+else
+    disp('Ellende of rechtdoor');
+end
 
 logboek{n,10} = dir;
+
 end
+
+
+drawArrow = @(x,y) quiver( x(1),y(1),x(2)-x(1),y(2)-y(1),0 );   
+
+x1 = [xcarp xcar];
+y1 = [ycarp ycar];
+drawArrow(x1,y1);
 hold on;
-scatter(x(1), y(1))
-scatter(x(2), y(2))
-scatter(x(3), y(3))
+x1 = [xcar xtarget];
+y1 = [ycar ytarget];
+drawArrow(x1,y1);
+
+
+
+
+% hold on;
+% scatter(x(1), y(1))
+% scatter(x(2), y(2))
+% scatter(x(3), y(3))
