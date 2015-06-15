@@ -15,7 +15,7 @@ global LIVE;
         m = TDOAv0_1(1);
     end
      [x y] = mainloc(m);
-     kitt = [x/100 y/100]
+     kitt = [x/100 y/100];
 %     EPO4figure.setKITT(kitt)
 %      pause(1)
 end

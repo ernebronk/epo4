@@ -20,7 +20,8 @@ locs = [x1'
 
 % Test variables
     COM_PORT    = 94;
-    DELAY       = 0.4;
+    DELAY1      = 0.4;
+    DELAY2      = 0.4;
     LIVE        = 0;
     state       = 0;
     
@@ -33,6 +34,7 @@ global dirNeutral;
 global n;
 global logboek;
 n = 2;
+
 DEBUG = false;
 logboek{1, 1} = 'Time';
 logboek{1, 2} = 'Xpos';
@@ -52,7 +54,7 @@ target = [0 0];
 % Car constants
 speed_tx        = 150;
 speed_rx        = 0;
-dirNeutral     = 150;
+dirNeutral      = 150;
 dir_rx          = 0;
 dir_tx          = 150;
 dirRight        = 160;

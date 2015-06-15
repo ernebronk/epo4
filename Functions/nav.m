@@ -6,7 +6,7 @@ global dirNeutral;
 global logboek;
 global n;
 
-
+global gui;
 
 % getOrientation(car(1), ycar, xcarp, ycarp);
 HDG = getOrientation(carp(1),carp(2),car(1),car(2));
@@ -37,4 +37,6 @@ end
 
 logboek{n,8} = HDG;
 logboek{n,9} = atarget;
+
+gui.hdg.String = [gui.data.names.hdg num2str(HDG)];
 end
