@@ -30,7 +30,7 @@ classdef EPO4figure
             xlabel('X coordinate (m)');
             ylabel('Y coordinate (m)');
             zlabel('Z coordinate (m)');
-            axis([-2 10 -2 10]);
+            axis([-2 8 -2 8]);
             hold on;
             grid on
             set(gca, 'GridLineStyle', '-');
