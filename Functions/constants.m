@@ -16,7 +16,7 @@ locs = [x1'
 % way = [1 1]
 % obs = [1.2 1.2]
 
-    %EPO4figure.setMicLoc(locs)
+EPO4figure.setMicLoc(locs)
 
 % Test variables
     COM_PORT    = 71;
@@ -49,7 +49,7 @@ logboek{1, 9} = 'Target';
 % System Constants
 conn_state = 0;
 target1 = [ 100 100 ];
-target2 = [ 100 100 ];
+target2 = [ 300 200 ];
 
 
 % Car constants
@@ -66,6 +66,9 @@ carpos          = [ 300 540 ];
 carposp         = [ 300 600 ];
 
 res = 10;
+
+      EPO4figure.setWayPoint(target1./100)
+      EPO4figure.setDestination(target2./100)
 
 
 

@@ -38,6 +38,6 @@ end
 logboek{n,8} = HDG;
 logboek{n,9} = atarget;
 
-gui.hdgd.String = num2str(HDG);
+gui.hdg.String = [gui.data.names.hdg num2str()];
 
 end

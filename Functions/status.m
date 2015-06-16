@@ -3,6 +3,7 @@ function battery = status()
 global logboek;
 global n;
 global LIVE;
+global gui;
 
 if (LIVE)
 status = EPOCommunications('transmit','S'); % request status string
@@ -17,6 +18,7 @@ distancer = str2double(t_status(5));
 battery = str2double(t_status(6));
 
 logboek{n,4} = battery;
+gui.batd.String = num2str(battery);
 
 if battery <= 0
     disp('Error: Recieved invalid data (battery)')

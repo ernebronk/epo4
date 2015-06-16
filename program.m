@@ -56,8 +56,8 @@ while(state < 900)
     [carpos(1) carpos(2)] = loctdo();
     
     % Update position in GUI
-    gui.xpos.String = [gui.data.names.xpos num2str(carpos(1))];
-    gui.ypos.String = [gui.data.names.ypos num2str(carpos(2))];
+    gui.xposd.String = num2str(carpos(1));
+    gui.yposd.String = num2str(carpos(2));
 
     dsp = ['X' num2str(carpos(1)) ' Y' num2str(carpos(2))];
     disp(dsp);
