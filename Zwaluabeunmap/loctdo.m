@@ -31,6 +31,6 @@ global mic;
     end
      [x y] = mainloc(m);
      kitt = [x/100 y/100];
-%     EPO4figure.setKITT(kitt)
+     EPO4figure.setKITT(kitt)
 %      pause(1)
 end
