@@ -21,6 +21,8 @@ while(cstate == 0)
     end  
     logboek{n,1} = toc;
     disp(battery);
+    state = 100;
+    gui.stated.String = num2str(state);
 end
 
 while(state < 900)
@@ -38,6 +40,8 @@ while(state < 900)
         speed = fwdSpeed;
         speed = 150;
         target = target1;
+        state = 200;
+
     end
     
     if(abs(carpos(1) - target2(1)) < res && abs(carpos(2) - target2(2)) < res && state == 450)
@@ -46,6 +50,8 @@ while(state < 900)
     else
         speed = fwdSpeed;
         target = target2;
+        state = 300;
+
     end
 
 
@@ -76,6 +82,8 @@ while(state < 900)
     % Send stop
     send(dir,150);
     
+    
+    gui.stated.String = num2str(state);
     
     %Write LOG
     n = n + 1;

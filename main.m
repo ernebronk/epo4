@@ -26,12 +26,14 @@ gui.data.xpos = 'No Data';
 gui.data.ypos = 'No Data';
 gui.data.hdg  = 'No Data';
 gui.data.bat  = 'No Data';
+gui.data.state = 'No Data';
 
 
 gui.data.names.xpos = 'X Pos: ';
 gui.data.names.ypos = 'Y Pos: ';
 gui.data.names.hdg  = 'HDG :';
 gui.data.names.bat  = 'Battery :';
+gui.data.names.state  = 'State :';
 
 
 % gui.hdg = uicontrol('Style', 'text',...
